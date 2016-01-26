@@ -20,8 +20,10 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
 
+        //launch screen brightness activity end
         Intent bright_intent = new Intent(SingleFragmentActivity.this, BrightScreen.class);
         startActivity(bright_intent);
+        //launch screen brightness activity end
 
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fragment_container);
