@@ -15,7 +15,13 @@ public class Crime {
 
     public Crime() {
         // Generator unique identifier
-        mID = UUID.randomUUID();
+        this(UUID.randomUUID());
+        //mID = UUID.randomUUID();
+        //mDate = new Date();
+    }
+
+    public Crime(UUID id){
+        mID = id;
         mDate = new Date();
     }
 
@@ -43,7 +49,7 @@ public class Crime {
         mSolved = solved;
     }
 
-    public void setmTitle(String mTitle) {
+    public void setTitle(String mTitle) {
         this.mTitle = mTitle;
     }
 }
